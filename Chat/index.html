@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco Chato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container" id="menu-container">
+        <h2>Bem-vindo ao Disco Chato!</h2>
+        <button onclick="chooseOption('login')">Entrar</button>
+        <button onclick="chooseOption('signup')">Criar Conta</button>
+    </div>
+
+    <div class="login-container" id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Digite seu nome de usuário">
+        <input type="password" id="password" placeholder="Digite sua senha">
+        <button onclick="login()">Entrar</button>
+        <button onclick="backToMenu()">Voltar</button>
+    </div>
+    
+    <div class="signup-container" id="signup-container">
+        <h2>Criar Conta</h2>
+        <input type="text" id="new-username" placeholder="Digite um novo nome de usuário">
+        <input type="password" id="new-password" placeholder="Digite uma senha">
+        <button onclick="signup()">Criar Conta</button>
+        <button onclick="backToMenu()">Voltar</button>
+    </div>
+
+    <div class="main-container" id="main-container">
+        <div class="sidebar">
+            <div class="server-list">
+                <div class="server">DC</div>
+            </div>
+            <div class="channel-list">
+                <div class="channel"># geral</div>
+                <div class="channel"># memes</div>
+                <div class="channel"># vídeos</div>
+            </div>
+            <div class="friend-list">
+                <h3>Amigos</h3>
+                <div id="friend-list"></div>
+                <input type="text" id="friend-username" placeholder="Adicionar amigo">
+                <button onclick="addFriend()">Adicionar</button>
+            </div>
+            <div class="profile">
+                <h3>Perfil</h3>
+                <input type="file" id="avatar-input">
+                <button onclick="changeAvatar()">Alterar Foto</button>
+                <button onclick="logout()">Sair</button>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat-header">
+                <h2># geral</h2>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Mensagens serão inseridas aqui pelo JavaScript -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Digite uma mensagem...">
+                <input type="file" id="file-input">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
